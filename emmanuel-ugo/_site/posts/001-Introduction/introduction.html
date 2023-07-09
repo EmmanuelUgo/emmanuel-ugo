@@ -6,10 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
-<meta name="dcterms.date" content="2023-07-09">
+<meta name="author" content="Emmanuel Ugochukwu">
+<meta name="dcterms.date" content="2022-02-07">
+<meta name="description" content="A workflow on how I plan to build this project">
 
-<title>Emmanuel Ugochukwu - Post With Code</title>
+<title>Emmanuel Ugochukwu - Building a Chat Analyzer app - Part 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -117,8 +84,8 @@ cookieconsent.run({
   
 
 
-<meta name="twitter:title" content="Emmanuel Ugochukwu - Post With Code">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="Emmanuel Ugochukwu - Building a Chat Analyzer app - Part 1">
+<meta name="twitter:description" content="A workflow on how I plan to build this project">
 <meta name="twitter:image" content="thumbnail_blog.png">
 <meta name="twitter:creator" content="@emm_aguila">
 <meta name="twitter:card" content="summary_large_image">
@@ -183,21 +150,40 @@ cookieconsent.run({
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#features" id="toc-features" class="nav-link active" data-scroll-target="#features">Features</a>
+  <ul class="collapse">
+  <li><a href="#chat-summary-feature" id="toc-chat-summary-feature" class="nav-link" data-scroll-target="#chat-summary-feature">Chat Summary Feature</a></li>
+  <li><a href="#wordcloud-and-sentiment-analysis-feature" id="toc-wordcloud-and-sentiment-analysis-feature" class="nav-link" data-scroll-target="#wordcloud-and-sentiment-analysis-feature">Wordcloud and Sentiment Analysis Feature</a></li>
+  <li><a href="#word-association-feature" id="toc-word-association-feature" class="nav-link" data-scroll-target="#word-association-feature">Word Association Feature</a></li>
+  <li><a href="#comparison-feature" id="toc-comparison-feature" class="nav-link" data-scroll-target="#comparison-feature">Comparison Feature</a></li>
+  <li><a href="#extras" id="toc-extras" class="nav-link" data-scroll-target="#extras">Extras</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Post With Code</h1>
+<h1 class="title">Building a Chat Analyzer app - Part 1</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">news</div>
-    <div class="quarto-category">code</div>
-    <div class="quarto-category">analysis</div>
+    <div class="quarto-category">NLP</div>
+    <div class="quarto-category">Shiny</div>
+    <div class="quarto-category">Text Analytics</div>
+    <div class="quarto-category">WhatsApp series</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    <p>A workflow on how I plan to build this project</p>
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -205,14 +191,14 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Harlow Malloc </p>
+             <p><a href="https://github.com/emmanuelugo">Emmanuel Ugochukwu</a> </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 9, 2023</p>
+      <p class="date">February 7, 2022</p>
     </div>
   </div>
   
@@ -222,15 +208,59 @@ cookieconsent.run({
 
 </header>
 
-<p>This is a post with executable code.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<p>Hello 👋</p>
+<p>In this post, I go over my plans and ideas on a new project I am embarking on, <strong>A Whatsapp Chat Analyzer</strong>. It is a fun app where the user uploads their chat history and they are filled with fun fact information about their chats.</p>
+<p>The number of features that would be in this app hasn’t been decided yet but with what I have currently, it should be a fun app. I did a little social experiment with friends and found out how interesting this project would be. Simply telling friends that they have sent <strong>X</strong> amount of messages over a particular period or they use a particular word all the time or some little fun fact can put a smile on their face. In turn, this project would solidify my understanding on Text Analytics and improve my R Shiny skills.</p>
+<p>Let’s go over some of the features of the app, shall we?</p>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
+<section id="chat-summary-feature" class="level3">
+<h3 class="anchored" data-anchor-id="chat-summary-feature">Chat Summary Feature</h3>
+<p>This answers the following questions;</p>
+<ol type="1">
+<li>Total number of messages sent.</li>
+<li>Total number of users.</li>
+<li>Most active user (<em>by number of text sent)</em></li>
+<li>User with the highest average length of text.</li>
+<li>The least active user (<em>by number of text sent)</em>.</li>
+<li>The user who uses a lot of Emojis 😅</li>
+</ol>
+<p>Plots that would be generated in here would include a plot of the (20) most active users by number of text sent and a plot of the top users with highest average text length.</p>
+</section>
+<section id="wordcloud-and-sentiment-analysis-feature" class="level3">
+<h3 class="anchored" data-anchor-id="wordcloud-and-sentiment-analysis-feature">Wordcloud and Sentiment Analysis Feature</h3>
+<p>Here, I plan on grouping text into Happy and Sad sentiments and displaying them with wordclouds and also perform a sentiment trend analysis since there would be a date column.</p>
+</section>
+<section id="word-association-feature" class="level3">
+<h3 class="anchored" data-anchor-id="word-association-feature">Word Association Feature</h3>
+<p>This would group words together so we can understand how some words are connected. A network graph would be used to display the result.</p>
+</section>
+<section id="comparison-feature" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-feature">Comparison Feature</h3>
+<p>This feature would drill down to a particular person or group of people and would highlight the following:</p>
+<ol type="1">
+<li>Unique words for each user(s).</li>
+<li>Activity Status: Average chat length, Number of messages sent, Ranking activity level by some time variables.</li>
+<li>Wordcloud to display most used words.</li>
+<li>Lexical Diversity.</li>
+<li>Sentiments.</li>
+<li>A feature to download these analysis.</li>
+</ol>
+</section>
+<section id="extras" class="level3">
+<h3 class="anchored" data-anchor-id="extras">Extras</h3>
+<p>Another fun features to implement would be:</p>
+<ol type="1">
+<li>When a user enters a word, the app returns a plot of the people who has used that word the most and also a popularity trend and the total number of times that word was used.</li>
+</ol>
+<p>With these few ideas, the app should serve as a good data science project. I gave myself a deadline of 2 months to complete the app and I will try my best to beat that time.</p>
+<p>I will be writing more blogs covering the entire process.</p>
+<p>See you soon!</p>
+<p>❤️</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <div>
