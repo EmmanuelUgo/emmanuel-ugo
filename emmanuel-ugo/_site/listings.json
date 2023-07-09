@@ -1,8 +1,8 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
-      "/posts/post-with-code/index.html",
+      "/posts/post-with-code/blog.html",
       "/posts/welcome/index.html"
     ]
   }
