@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: c7a4f144-1702-4947-9d05-a73abad6b1f2
+      url: 'https://chic-cassata-60931b.netlify.app'
