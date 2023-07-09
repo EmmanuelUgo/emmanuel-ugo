@@ -3,7 +3,7 @@
     "path": "~/Desktop/Work/Brand/emmanuel-ugo/emmanuel-ugo/_quarto.yml",
     "project_path": "_quarto.yml",
     "type": "yaml",
-    "hash": "2065969133",
+    "hash": "1877882604",
     "contents": "",
     "dirty": false,
     "created": 1688919106613.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "30,27",
+        "cursorPosition": "5,45",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1688921794,
+    "lastKnownWriteTime": 1688925725,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1688921794704,
+    "last_content_update": 1688925725405,
     "read_only": false,
     "read_only_alternatives": []
 }

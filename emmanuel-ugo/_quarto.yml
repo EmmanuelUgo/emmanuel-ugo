@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Emmanuel Ugochukwu"
+  site-url: https://emmanuel-ugo.netlify.app/
   description: "This is Emmanuel Ugochukwu's personal Blog."
   navbar:
     right:
